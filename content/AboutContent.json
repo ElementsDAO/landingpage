@@ -1,0 +1,16 @@
+{
+  "title": "Online Investment Platform",
+  "text": "Elements provides a platform to securly fund new renewable energy systems.",
+  "section": [
+    {
+      "title": "100% Transparent and Secure",
+      "content": "All transactions are public avaialbla and unmutatable story in a eco friendly Blockchain. And all code is Open source and will be audited.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Free and Permissionless",
+      "content": "Everyone can participate on projects and have a positive impact on the climate change.",
+      "icon": "notes.svg"
+    }
+  ]
+}
