@@ -18,7 +18,6 @@ const Container = dynamic(() => import("../common/Container"));
 const ScrollToTop = dynamic(() => import("../common/ScrollToTop"));
 const ContentBlock = dynamic(() => import("../components/ContentBlock"));
 
-  const { locale, locales, defaultLocale, asPath } = useRouter();
   const newsContent = {
     en: {
       title: "Your News",
@@ -47,7 +46,6 @@ const ContentBlock = dynamic(() => import("../components/ContentBlock"));
       ],
     },
   };
-  const { title, content } = newsContent[locale];
 
   return (
     <>

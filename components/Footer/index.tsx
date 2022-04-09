@@ -21,12 +21,18 @@ import {
 } from "./styles";
 import { useRouter } from "next/router";
 
+import {
+  useTranslation,
+  useLanguageQuery,
+  LanguageSwitcher,
+} from "next-export-i18n";
+
 interface SocialLinkProps {
   href: string;
   src: string;
 }
 
-const Footer = ({ t }: any) => {
+const Footer = () => {
   const router = useRouter();
 
   const handleChange = (language: string) => {
@@ -47,6 +53,7 @@ const Footer = ({ t }: any) => {
       </a>
     );
   };
+  const { t } = useTranslation();
 
   return (
     <>
@@ -106,7 +113,7 @@ const Footer = ({ t }: any) => {
             <Col lg={6} md={6} sm={12} xs={12}>
               <Label htmlFor="select-lang">{"Language"}</Label>
               <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
+                {/* <LanguageSwitch onClick={() => handleChange("en")}>
                   <SvgIcon
                     src="united-states.svg"
                     aria-label="homepage"
@@ -121,7 +128,12 @@ const Footer = ({ t }: any) => {
                     width="30px"
                     height="30px"
                   />
-                </LanguageSwitch>
+                </LanguageSwitch> */}
+                <nav>
+                  {t("ui.languageSwitcher")}
+                  <LanguageSwitcher lang="de">de</LanguageSwitcher> |{" "}
+                  <LanguageSwitcher lang="en">en</LanguageSwitcher>
+                </nav>
               </LanguageSwitchContainer>
             </Col>
           </Row>
