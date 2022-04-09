@@ -15,7 +15,15 @@ import {
   Span,
 } from "./styles";
 
-const Header = ({ t }: any) => {
+import {
+  useTranslation,
+  useLanguageQuery,
+  LanguageSwitcher,
+} from "next-export-i18n";
+
+const Header = () => {
+  const { t } = useTranslation();
+
   const [visible, setVisibility] = useState(false);
 
   const showDrawer = () => {
@@ -62,7 +70,7 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer href="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <SvgIcon src="logo.svg" width="" height="50px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

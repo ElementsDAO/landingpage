@@ -10,6 +10,11 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Styles } from "../styles/styles";
 import dynamic from 'next/dynamic'
+import {
+  useTranslation,
+  useLanguageQuery,
+  LanguageSwitcher,
+} from "next-export-i18n";
 
 export default function Home() {
 const Contact = dynamic(() => import("../components/ContactForm"));
@@ -18,34 +23,7 @@ const Container = dynamic(() => import("../common/Container"));
 const ScrollToTop = dynamic(() => import("../common/ScrollToTop"));
 const ContentBlock = dynamic(() => import("../components/ContentBlock"));
 
-  const newsContent = {
-    en: {
-      title: "Your News",
-      content: [
-        {
-          title:
-            "Otter.ai’s new assistant can automatically transcribe your Zoom meetings",
-          synopsis:
-            "A.I.-powered voice transcription service Otter.ai wants to make it even easier for its business users to record their meetings. The company is today introducing a new feature, Otter Assistant, whic...",
-          imageUrl: "",
-        },
-        // ...
-      ],
-    },
-    de: {
-      title: "Vos nouvelles",
-      content: [
-        {
-          title:
-            "Le nouvel assistant d'Otter.ai peut transcrire automatiquement vos réunions Zoom",
-          synopsis:
-            "Le service de transcription vocale alimenté par A.I. Otter.ai veut rendre encore plus facile pour ses utilisateurs professionnels l'enregistrement de leurs réunions. La société présente aujourd'hui une nouvelle fonctionnalité, Otter Assistant, qui ...",
-          imageUrl: "",
-        },
-        // ...
-      ],
-    },
-  };
+const { t } = useTranslation();
 
   return (
     <>
@@ -55,7 +33,7 @@ const ContentBlock = dynamic(() => import("../components/ContentBlock"));
         <ScrollToTop />
         <ContentBlock
           type="right"
-          title={IntroContent.title}
+          title={t("content.intro.title")}
           content={IntroContent.text}
           button={IntroContent.button}
           icon="renewable-energy.jpg"

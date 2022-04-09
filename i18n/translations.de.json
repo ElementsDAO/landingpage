@@ -1,5 +1,12 @@
 {
   "ui": {
     "languageSwitcher": "Sprache wählen: "
+  },
+  "content": {
+    "intro": {
+      "title": "Investiere in Erneuerbare Energien",
+      "text": "Elements is a crowd investment platform to fund renewable energy systems with global scale.",
+      "button": "Explore"
+    }
   }
 }
