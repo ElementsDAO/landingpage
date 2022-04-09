@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "prepare-deploy": "next build && next export"
+    "prepare-deploy": "BASE_PATH='landingpage' next build && next export"
   },
   "dependencies": {
     "antd": "^4.19.5",
