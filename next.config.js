@@ -1,4 +1,5 @@
+
 // next.config.js
 module.exports = {
-  basePath: '/landingpage',
+  basePath: process.env.BASE_PATH || '',
 }
