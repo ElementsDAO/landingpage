@@ -4,13 +4,13 @@ export const Styles = createGlobalStyle`
 
     @font-face {
         font-family: "Exo 2 Regular";
-        src: url("/fonts/Exo2-Regular.ttf") format("truetype");
+        src: url("fonts/Exo2-Regular.ttf") format("truetype");
         font-style: normal;
     }
 
     @font-face {
         font-family: "Exo 2 Bold";
-        src: url("/fonts/Exo2-ExtraBold.ttf") format("truetype");
+        src: url("fonts/Exo2-ExtraBold.ttf") format("truetype");
         font-style: normal;
     }
 
