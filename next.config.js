@@ -1,2 +1,4 @@
 // next.config.js
-module.exports = {}
+module.exports = {
+  basePath: '/landingpage',
+}
