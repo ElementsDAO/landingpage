@@ -1,6 +1,5 @@
 {
-    "myKey": "de translation",
-    "nested" : {
-      "key": "nested de translation"
-    }
+  "ui": {
+    "languageSwitcher": "Choose Language: "
   }
+}
