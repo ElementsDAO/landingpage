@@ -47,7 +47,7 @@ export const Styles = createGlobalStyle`
 
         :focus-within {
             background: none;
-            box-shadow: #2e186a 0px 0px 0px 1px;
+            box-shadow: #278C6D 0px 0px 0px 1px;
         }
     }
 
@@ -84,10 +84,10 @@ export const Styles = createGlobalStyle`
     a {
         text-decoration: none;
         outline: none;
-        color: #2E186A;
+        color: #278C6D;
 
         :hover {
-            color: #2e186a;
+            color: #278C6D;
         }
     }
     
