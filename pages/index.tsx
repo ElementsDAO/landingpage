@@ -36,9 +36,9 @@ const { t } = useTranslation();
           title={t("content.intro.title")}
           content={IntroContent.text}
           button={IntroContent.button}
-          icon="renewable-energy.jpg"
+          icon="intro.jpg"
           id="intro"
-        />
+          />
         <MiddleBlock
           title={MiddleBlockContent.title}
           content={MiddleBlockContent.text}
@@ -49,14 +49,14 @@ const { t } = useTranslation();
           title={AboutContent.title}
           content={AboutContent.text}
           section={AboutContent.section}
-          icon="graphs.svg"
+          icon="about.jpg"
           id="about"
         />
         <ContentBlock
           type="right"
           title={MissionContent.title}
           content={MissionContent.text}
-          icon="product-launch.svg"
+          icon="invest.jpg"
           id="mission"
         />
         <ContentBlock
