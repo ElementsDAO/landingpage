@@ -1,19 +1,9 @@
-import { useRouter } from "next/router";
-import IntroContent from "../content/IntroContent.json";
-import MiddleBlockContent from "../content/MiddleBlockContent.json";
-import AboutContent from "../content/AboutContent.json";
-import MissionContent from "../content/MissionContent.json";
-import ProductContent from "../content/ProductContent.json";
-import ContactContent from "../content/ContactContent.json";
-
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Styles } from "../styles/styles";
 import dynamic from 'next/dynamic'
 import {
   useTranslation,
-  useLanguageQuery,
-  LanguageSwitcher,
 } from "next-export-i18n";
 
 export default function Home() {
@@ -34,41 +24,41 @@ const { t } = useTranslation();
         <ContentBlock
           type="right"
           title={t("content.intro.title")}
-          content={IntroContent.text}
-          button={IntroContent.button}
+          content={t("content.intro.text")}
+          button={[{"title": t("content.intro.button")}]}
           icon="intro.jpg"
           id="intro"
           />
         <MiddleBlock
-          title={MiddleBlockContent.title}
-          content={MiddleBlockContent.text}
-          button={MiddleBlockContent.button}
+          title={t("content.problem-statement.title")}
+          content={t("content.problem-statement.text")}
+          button={t("content.problem-statement.button")}
         />
         <ContentBlock
           type="left"
-          title={AboutContent.title}
-          content={AboutContent.text}
-          section={AboutContent.section}
+          title={t("content.about.title")}
+          content={t("content.about.text")}
+          section={t("content.about.section")}
           icon="about.jpg"
           id="about"
         />
         <ContentBlock
           type="right"
-          title={MissionContent.title}
-          content={MissionContent.text}
+          title={t("content.mission.title")}
+          content={t("content.mission.text")}
           icon="invest.jpg"
           id="mission"
         />
         <ContentBlock
           type="left"
-          title={ProductContent.title}
-          content={ProductContent.text}
+          title={t("content.product.title")}
+          content={t("content.product.text")}
           icon="elements-energy.jpg"
           id="product"
         />
         <Contact
-          title={ContactContent.title}
-          content={ContactContent.text}
+          title={t("content.contact.title")}
+          content={t("content.contact.text")}
           id="contact"
         />
       </Container>
